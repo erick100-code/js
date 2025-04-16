@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu primeiro programa em JavaScript</title>
+</head>
+<body>
+    <h1>olá, mundo!</h1>
+    <p>já me livrei da maldição</p>
+
+    <script>
+        var nome = window.prompt('digite seu nome completo para continuar:') //pergunta para o usuario o nome completo
+        window.alert('parabens por concluir a tarefa ' + nome + ' esta pronto para recomeçar?') //mostra que guardou o nome do usuario
+        var resposta = window.prompt('digite "sim" para continuar ' + nome) //espera confirmação do usuario
+        var idade = window.prompt('qual é a sua idade ' + nome + '?') //pergunta a idade
+        window.confirm('seu nome é ' + nome + '? sua idade é de ' + idade + ' anos?') //confirma o nome e idade
+    </script>
+</body>
+</html>
