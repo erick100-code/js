@@ -3,33 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>soma</title>
+    <title>concatenação</title>
 </head>
 <body>
     <h1>ex005</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum labore, quo sint libero aut esse inventore deserunt commodi officiis officia ad repellat mollitia repudiandae? Magni eligendi ad voluptas aut dolores.</p>
 
     <script>
-        //exercício de soma secreta. objetivo principal: converter valores 'string' e 'number' 
-        //convertendo numeros em strings e strings em numeros
-        //adicionando e somando numeros
-        window.prompt(`olá, viajante. preparando para começar? digite ok para continuar ou digite cancelar`)
-        window.alert(`vamos começar somando dois numeros!`)
-        var n1 = Number(window.prompt(`digite um numero`))
-        var n2 = Number(window.prompt(`digite outro numero`))
-        var soma = n1 + n2
-        window.alert(`o primeiro valor: ${n1} e o segundo valor: ${n2} somados ficam ${soma}`)
-        window.prompt(`pronto para o proximo desafio?`)
-        window.alert(`excelente escolha! vamos mais uma, dessa vez vamos multiplicar os numeros`)
-        var num1 = window.prompt(`digite um numero`)
-        var num2 = window.prompt(`digite outro numero`)        
-        Number(num1) //convertendo string para number de forma alternativa
-        Number(num2)
-        var M = num1 * num2
-        window.alert(`${num1} e ${num2} multiplicados ficam ${M}`)
-        var soma = soma.toString()
-        var m = M.toString()//terminar de testar converter valores em string para concatenar...
-        var final = soma + M //até amanha
-        document.write(`concatenação de string: > > > ${final}`)
+        var n1 = Number(window.prompt(`digite qualquer numero`)) //converte para numero 
+        var n2 = Number(window.prompt(`digite qualquer outro numero`))
+        n1 = n1.toString() //converte para string novamente 
+        n2 = n2.toString()
+        s = n1 + n2 //obriga o JavaScript a concatenar em vez de somar
+        document.write(`o valor ${n1} e o valor ${n2} concatenados juntos ficam ${s}`)
     </script>
 </body>
 </html>
