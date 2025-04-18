@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex003</title>
+    <style>
+        body, html {
+            height: 97vh;
+            width: 98vw;
+
+            background-color: blue;
+            color: white;
+            
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+
+        main {
+            display: grid;
+            gap: 70px 0px;
+            justify-content: center;
+            align-content: center;
+            height: 97vh;
+            width: 98vw;
+        }
+
+        div.caixas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 200px;
+
+            background-color: green;
+            border-radius: 10px;
+
+            text-align: center;
+        }
+
+        div.caixas > p {
+            cursor: pointer;
+        }
+        
+        #reiniciar {
+            display: none;
+            margin: 30px 0px;
+            padding: 10px;
+
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.493);
+
+            font-size: 16px;
+            font-family: monospace;
+            
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="c1" class="caixas">
+            <p onclick="esconde1()" id="p1">click em mim!</p>
+        </div>
+        <input type="button" value="reiniciar" id="reiniciar" onclick="rebot()">
+        <div id="c2" class="caixas">
+            <p onclick="esconde2()" id="p2">click em mim!</p>
+        </div>
+    </main>
+
+    <script>
+        function esconde1() {
+            var caixa1 = document.getElementById('c1')
+            var caixa2 = document.getElementById('c2')
+            var p1 = document.getElementById('p1')
+            var p2 = document.getElementById('p2')
+            var main = document.getElementsByTagName('main')[0]
+            var rei = document.getElementById('reiniciar')
+            caixa1.style.backgroundColor = 'blue'
+            p1.style.display = 'none' 
+            p2.innerText = 'ei você, click aqui!'
+            p2.style.display = 'block'
+            caixa2.style.backgroundColor = 'green'
+            main.style.gap = '0px'
+            rei.style.display = 'block'
+        }
+
+        function esconde2() {
+            var caixa1 = document.getElementById('c1')
+            var caixa2 = document.getElementById('c2')
+            var p1 = document.getElementById('p1')
+            var p2 = document.getElementById('p2')
+            var main = document.getElementsByTagName('main')[0]
+            var rei = document.getElementById('reiniciar')
+            caixa1.style.backgroundColor = 'green'
+            p1.style.display = 'block'
+            caixa2.style.backgroundColor = 'blue'
+            p2.style.display = 'none'
+            p1.innerText = 'agora click em mim!'
+            rei.style.display = 'block'
+            main.style.gap = '0px'
+        }
+
+        function rebot() {
+            var rei = document.getElementById('reiniciar')
+            var caixa1 = document.getElementById('c1')
+            var caixa2 = document.getElementById('c2')
+            var p1 = document.getElementById('p1')
+            var p2 = document.getElementById('p2')
+            var main = document.getElementsByTagName('main')[0]
+            caixa1.style.backgroundColor = 'green'
+            caixa2.style.backgroundColor ='green'
+            p1.style.display = 'block'
+            p2.style.display = 'block'
+            p1.innerText = 'click aqui!'
+            p2.innerText = 'click aqui'
+            rei.style.display = 'none'
+            main.style.gap = '70px'
+        }
+    </script>
+</body>
+</html>
