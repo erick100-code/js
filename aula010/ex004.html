@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 98vw;
+            height: 97vh;
+            
+            background-color: darkgray;
+            
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        
+        main {
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            grid-template-columns: 300px;
+            grid-template-rows: minmax(0px, 500px);
+            height: 97vh;
+            width: 98vw;
+        }
+
+        main > div#cx {
+            padding: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+           
+            flex-direction: column;
+
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        input {
+            text-align: center;
+
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid;
+            width: 70%;
+
+            font-size: 20px;
+        }
+
+        p {
+            line-height: 30px;
+        }
+
+        #somar {
+            margin-top: 35px;
+            margin-bottom: 20px;
+
+            cursor: pointer;
+        }
+
+        .c {
+            text-align: center;
+        }
+
+        div#res {
+            min-width: 200px;
+            max-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="cx">
+            <div class="c">
+                <p>digite um numero:</p><input type="number" name="n1" id="n1">
+            </div>
+            <div class="c">
+                <p>digite outro numero:</p> <input type="number" name="n2" id="n2">
+            </div>
+            <input type="button" value="somar" id="somar" onclick="soma()">
+
+            <div id="res">
+                ...
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function soma() {
+            var tet1 = document.getElementById('n1')
+            var tet2 = document.getElementById('n2')
+            var res = document.getElementById('res')
+           
+            var n1 = Number(tet1.value) 
+            var n2 = Number(tet2.value)
+            var soma = n1 + n2
+            res.innerText = `${n1} + ${n2} = ${soma}`
+        }
+    </script>
+</body>
+</html>
