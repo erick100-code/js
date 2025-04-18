@@ -18,7 +18,6 @@
 
         main {
             display: grid;
-            gap: 70px 0px;
             justify-content: center;
             align-content: center;
             height: 97vh;
@@ -43,13 +42,16 @@
         }
         
         #reiniciar {
-            display: none;
+            
             margin: 30px 0px;
             padding: 10px;
 
             border-radius: 30px;
             border: none;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.493);
+            background-color: blue;
+            color: blue;
+          
+            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.493); */
 
             font-size: 16px;
             font-family: monospace;
@@ -82,8 +84,8 @@
             p2.innerText = 'ei você, click aqui!'
             p2.style.display = 'block'
             caixa2.style.backgroundColor = 'green'
-            main.style.gap = '0px'
-            rei.style.display = 'block'
+            rei.style.backgroundColor = 'white'
+            rei.style.color = 'black'
         }
 
         function esconde2() {
@@ -98,8 +100,8 @@
             caixa2.style.backgroundColor = 'blue'
             p2.style.display = 'none'
             p1.innerText = 'agora click em mim!'
-            rei.style.display = 'block'
-            main.style.gap = '0px'
+            rei.style.backgroundColor = 'white'
+            rei.style.color = 'black'
         }
 
         function rebot() {
@@ -113,10 +115,10 @@
             caixa2.style.backgroundColor ='green'
             p1.style.display = 'block'
             p2.style.display = 'block'
-            p1.innerText = 'click aqui!'
-            p2.innerText = 'click aqui'
-            rei.style.display = 'none'
-            main.style.gap = '70px'
+            p1.innerText = 'click em mim!'
+            p2.innerText = 'click em mim!'
+            rei.style.backgroundColor = 'blue'
+            rei.style.color = 'blue'
         }
     </script>
 </body>
