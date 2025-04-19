@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 7</title>
+    <style>
+        img {
+            width: 15%;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="nivel1">exercício 7</h1>
+    <img src="imagens/pexels-esra-afsar-123882149-11220514.jpg" alt="image do sol e passaros">
+
+    <script>
+        var imagem = document.getElementsByTagName('img')[0] //seleciona a primera tag img
+        var titulo = document.getElementById('nivel1') 
+        imagem.addEventListener('mouseenter', entrar) //chama a funçao entrar ao colocar o mouse no elemento
+        imagem.addEventListener('mouseout', sair) //chama a função sair() ao tirar o mouse do elemento
+
+        function entrar() {
+            imagem.style.width = '25%'
+        }
+
+        function sair() {
+            imagem.style.width = '5%' 
+        }
+    </script>
+</body>
+</html>
