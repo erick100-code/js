@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex js</title>
+</head>
+<body>
+   <input type="number" name="teste" id="numero">
+
+    <script>
+        /*
+        var local = document.getElementById('local')
+        local.addEventListener('click', clicar)
+        local.addEventListener('mouseenter', entrar)  //adicionar eventos
+        local.addEventListener('mouseout', sair)
+        */
+        var teste = document.getElementById('numero')
+        teste.addEventListener('focus', alertar)
+
+        function alertar() {
+            teste.style.backgroundColor = 'red'
+        }
+    </script>
+</body>
+</html>
