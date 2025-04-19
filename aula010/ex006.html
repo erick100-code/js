@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aprendendo eventos</title>
+    <style>
+        body {
+            height: 97vh;
+            width: 97vw;
+            position: relative;
+
+            background-color: white;
+
+            font-size: 2em;
+        }
+
+        div#caixa {
+            margin-top: -8px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            background-color: gray;
+        }
+
+        a {
+            color: white;
+
+            text-decoration: underline;
+        }
+
+        a#verm {
+            color: red;
+        }
+
+        a#azul {
+            color: cyan;
+        }
+
+        a#verd {
+            color: green;
+        }
+
+        a#pre {
+            color: black;
+        }
+
+        a#ama {
+            color: yellow;
+        }
+
+        a#reset {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa">
+        <a href="#" id="verm">vermelho</a>
+        <a href="#" id="azul">azul</a>
+        <a href="#" id="verd">verde</a>
+        <a href="#" id="pre">preto</a>
+        <a href="#" id="ama">amarelo</a>
+        
+    </div>
+
+    <a href="#" id="reset">reset</a>
+
+    <script>
+        var link1 = document.getElementById('verm')
+        var link2 = document.getElementById('azul')
+        var link3 = document.getElementById('verd')
+        var link4 = document.getElementById('pre')
+        var link5 = document.getElementById('ama')
+        var fundo = document.body
+        var caixa = document.getElementById('caixa')
+        var reset = document.getElementById('reset')
+
+        reset.addEventListener('click', resetar)
+        link1.addEventListener('click', vermelho)
+        link2.addEventListener('click', azul)
+        link3.addEventListener('click', verde)
+        link4.addEventListener('click', preto)
+        link5.addEventListener('click', amarelo)
+
+        function resetar() {
+            reset.style.display = 'none'
+            fundo.style.backgroundColor = 'white'
+            caixa.style.backgroundColor = 'gray'
+        }
+
+        function vermelho() {
+            reset.style.display = 'block'
+            caixa.style.backgroundColor = 'red'
+            link1.style.color = 'white'
+            link2.style.color = 'cyan'
+            link3.style.color = 'green'
+            link4.style.color = 'black'
+            link5.style.color = 'gold'
+
+            fundo.style.backgroundColor = 'red'
+        }
+
+        function azul() {
+            reset.style.display = 'block'
+            caixa.style.backgroundColor = 'blue'
+            link2.style.color = 'white'
+            link1.style.color = 'red'
+            link3.style.color = 'green'
+            link4.style.color = 'black'
+            link5.style.color = 'gold'
+            fundo.style.backgroundColor = 'blue'
+        }
+
+        function verde() {
+            reset.style.display = 'block'
+            caixa.style.backgroundColor = 'green'
+            fundo.style.backgroundColor = 'green'
+            link3.style.color = 'white'
+            link1.style.color = 'red'
+            link2.style.color = 'cyan'
+            link4.style.color = 'black'
+            link5.style.color = 'gold'
+        }
+
+        function preto() {
+            reset.style.display = 'block'
+            caixa.style.backgroundColor = 'black'
+            fundo.style.backgroundColor = 'black'
+            link4.style.color = 'white'
+            link1.style.color = 'red'
+            link2.style.color = 'cyan'
+            link3.style.color = 'green'
+            link5.style.color = 'gold'
+        }
+
+        function amarelo() { 
+            reset.style.display = 'block'
+            caixa.style.backgroundColor = 'gold'
+            fundo.style.backgroundColor = 'gold'
+            link5.style.color = 'white'
+            link1.style.color = 'red'
+            link2.style.color = 'cyan'
+            link3.style.color = 'green'
+            link4.style.color = 'black'
+        }
+    </script>
+</body>
+</html>
