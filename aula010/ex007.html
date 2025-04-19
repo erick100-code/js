@@ -8,6 +8,10 @@
         img {
             width: 15%;
         }
+
+        h1 {
+            font-size: 2em;
+        }
     </style>
 </head>
 <body>
@@ -20,11 +24,13 @@
         imagem.addEventListener('mouseenter', entrar) //chama a funçao entrar ao colocar o mouse no elemento
         imagem.addEventListener('mouseout', sair) //chama a função sair() ao tirar o mouse do elemento
 
-        function entrar() {
+        function entrar() {//ao entrar com o mouse no elemento, aumenta o titulo e a imagem
+            titulo.style.fontSize = '4em'
             imagem.style.width = '25%'
         }
 
-        function sair() {
+        function sair() {//ao sair com o mouse do elemtento, diminui a imagem e o titulo
+            titulo.style.fontSize = '1em'
             imagem.style.width = '5%' 
         }
     </script>
