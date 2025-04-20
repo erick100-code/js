@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pressionar e soltar teclas</title>
+    <style>
+
+        @font-face {
+            font-family: 'estrada';
+            src: url('fontes/Another\ Danger\ Slanted\ -\ Demo.otf');
+        }
+
+        body {
+            height: 97vh;
+            width: 98vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            letter-spacing: 30px;
+            width: 80vw;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+
+            font-family: 'estrada';
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="text" id="text">
+    
+    <script>
+        var texto = document.getElementById('text')
+        texto.addEventListener('keydown', pressionar)
+        texto.addEventListener('keyup', soltar)
+
+        function pressionar() {//ao pressionar a tecla
+            document.body.style.backgroundColor = 'black' //muda o fundo
+            texto.style.backgroundColor = 'black' //muda a cor da caixa de texto
+            texto.style.color = 'white' //muda a cord da letra dentro do texto
+        }
+
+        function soltar() {// ao sotar tecla       
+            
+            setTimeout(function() {// setTimeout adiciona tempo antes de executar o codigo 
+                document.body.style.backgroundColor = 'white'
+                texto.style.backgroundColor = 'white'
+                texto.style.color = 'black'
+            }, 2000);
+
+        }
+    </script>
+</body>
+</html>
