@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="ttl">caixa de texto em JS</title>
+    <style>
+        body {
+            width: 98vw;
+            height: 97vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            width: 80vw;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            letter-spacing: 30px;
+            font-family: 'estrada';
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif; 
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="texto" id="texto">
+
+    <script>
+        var text = document.getElementById('texto')
+        text.addEventListener('keydown', fundo)
+
+        function fundo() {//event.key retorna o nome da tecla pressionada
+            var corpo = document.body
+            corpo.style.backgroundColor = 'cyan'
+            if (event.key === 'e') {//estrutura de if verifica se o nome da tecla pressionada é igual a letra depois executa a ação se for verdadeira. isso por meio do event.key
+                corpo.style.backgroundColor = 'red'
+            }
+            if (event.key === 'r') {
+                corpo.style.backgroundColor = '#033200'
+            }
+            if (event.key === 'i') {
+                corpo.style.backgroundColor = 'black'
+            }
+            if (event.key === 'c') {
+                corpo.style.backgroundColor = 'gray'
+            }
+            if (event.key === 'k') {
+                corpo.style.backgroundColor = 'blue'
+            }
+            if (event.key === '.') {
+                var titulo = document.getElementById('ttl')
+                corpo.style.backgroundColor = 'black'
+                text.style.display = 'none'
+                titulo.innerText = 'acabou'
+            }
+            if (event.key === ' ') {
+                corpo.style.background = 'white'
+            }
+        }
+    </script>
+</body>
+</html>
