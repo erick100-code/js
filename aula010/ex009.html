@@ -11,27 +11,39 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            
         }
 
         input {
-           
             width: 80vw;
             padding: 20px;
             font-size: 30px;
             text-align: center;
             letter-spacing: 30px;
+            font-family: 'estrada';
             text-transform: uppercase;
             font-family: Arial, Helvetica, sans-serif; 
-
-            font-family: 'estrada';
         }
     </style>
 </head>
 <body>
-    <input type="text" name="texto" id="cxtexto">
+    <h1>aperte enter para enviar</h1>
+    <input type="text" name="texto" id="cxtexto"> <!--caixa de texto-->
 
     <script>
+        var caixa = document.getElementById('cxtexto') //seleciona a caixa de texto
+        caixa.addEventListener('keydown', press) //ao pressionar chama o evento press
+
+        function press() { //verifica qual tecla foi pressionada e muda a cor do input  
+            if (event.key === 'Enter') {//(event.key) é uma propriedade js do objeto de evento que retorna o nome da tecla pressionada 
+                document.body.style.display = 'none' //torna o corpo invisivel
+                setTimeout(function() { //adiiconar 2 segundos de tempo antes de executar o codigo dentro:
+                    var a = window.prompt('digite (sim) para continuar')
+                    if (a === 'sim') {//verifica se o valor digitado no prompt é 'sim'
+                        document.body.style.display = 'block' //torna o corpo visivel aos olhos dnv
+                    }
+                }, 2000);
+            } 
+        }
         
     </script>
 </body>
