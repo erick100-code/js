@@ -99,7 +99,9 @@ div.fl > p {
 input[type="radio"] {
     margin-right: 20px;
 
-   /*accent-color: red; continuar no javascript. para resolver isso erick iremos fazer com que todos os input:radio fiquem com checked com cor (vermelha_ mas apenas o input com a resposta correta vai tar a cor (verde)*/
+    /*
+        accent-color: red; continuar no javascript. para resolver isso erick iremos fazer com que todos os input:radio fiquem com checked com cor (vermelha_ mas apenas o input com a resposta correta   vai tar a cor (verde)
+    */
 
     transform: scale(1.6);
 }
