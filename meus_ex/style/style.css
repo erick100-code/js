@@ -25,20 +25,46 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 80vw;
+    grid-template-columns: 90vw;
     justify-content: center;
+    padding: 30px 0px;
 
     background-color:#0F172A;
 }
 
-div.caixas {
-    background-color: #1E293B;
+h1 {
+    text-align: center;
+    color: gold;
+    font-size: 3em;
 }
 
-div.perguntas {
+
+
+div.caixas {
+    background-color: #1E293B;
+    padding: 10px;
+    margin: 30px 0px;
+}
+
+div.caixas > div.perguntas {
+    margin: 30px 0px;
+    padding: 10px;
+
     background-color:  #334155;
 }
 
-div.respostas {
-    background-color: #334155;
+div.perguntas > p {
+    color: white;
+}
+
+div.caixas > div.respostas {
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+
+    background-color: #334155; 
+}
+
+div.alternativas > div.fl {
+    display: flex;
 }
