@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --backgroundfull: #0F172A;
+    --bgcaixa: #1E293B;
+    --bgpergunta_e_resposta: #334155;
+
+    --font: "Inter", sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #0F172A;;
+
+    font-family: var(--font);
+    font-weight: normal;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 80vw;
+    justify-content: center;
+
+    background-color:#0F172A;
+}
+
+div.caixas {
+    background-color: #1E293B;
+}
+
+div.perguntas {
+    background-color:  #334155;
+}
+
+div.respostas {
+    background-color: #334155;
+}
