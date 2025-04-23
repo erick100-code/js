@@ -1,1 +1,1 @@
-var tes = document.body.style.display = 'none'
+window.alert('script js (javaScript) funcionando')
