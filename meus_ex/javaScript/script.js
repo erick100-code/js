@@ -3,6 +3,7 @@ var botão = document.getElementById('bot')
 botão.addEventListener('click', finalizar)
 
 function finalizar() {
+
     //primera pergunta
 
     var in1 = document.getElementById('p1')
@@ -48,6 +49,41 @@ function finalizar() {
     var inpu5 = document.getElementById('per5')
     var restrue5 = document.getElementById('restrue5')
 
+    if(in1.checked || in2.checked || in3.checked || in4.checked || in5.checked) {
+        var respondeu1 = 1
+    } else {
+        var respondeu1 = 0
+    }
+    // criar 3 variaveis respondeu 1,2,3,4,5 e só executa as propriedades js de cores e disabled se as variavies respondeu tiverem o mesmo valor. se não tiverem disparar um alerta
+    if(in11.checked || in22.checked || in33.checked || in44.checked || in55.checked) {
+        var respondeu2 = 1
+    } else {
+        var respondeu2 = 0
+    }
+
+    if (in111.checked || in222.checked || in333.checked || in444.checked | in555.checked) {
+        var respondeu3 = 1
+    } else {
+        var respondeu3 = 0 
+    }
+
+    if (in1111.checked || in2222.checked || in3333.checked || in4444.checked || in5555.checked) {
+        var respondeu4 = 1
+    } else {
+        var responde4 = 0
+    }
+    
+    if (inpu1.checked || inpu2.checked || inpu3.cheked || inpu4.checked || inpu5.checked) {
+        var respondeu5 = 1
+    } else {
+        var rondeu5 = 0
+    }
+
+    if (respondeu1 == 1 && respondeu2 == 1 && respondeu3 == 1 && respondeu4 == 1 && respondeu5 == 1) {
+        document.body.style.display = 'none'  
+    } else if (respondeu1 == 0 || respondeu2 == 0 || respondeu3 == 0 || respondeu4 == 0 || respondeu5 == 0) {
+        window.alert('prencha todas as alternativas')
+    }
 
     //primera pergunta
 
