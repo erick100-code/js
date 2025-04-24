@@ -37,7 +37,17 @@ function finalizar() {
     var in3333 = document.getElementById('pppp3')
     var in4444 = document.getElementById('pppp4')
     var in5555 = document.getElementById('pppp5')
-    var restrue3 = document.getElementById('restrue4')
+    var restrue4 = document.getElementById('restrue4')
+
+    //quinta ultima pergunta
+
+    var inpu1 = document.getElementById('per1')
+    var inpu2 = document.getElementById('per2')
+    var inpu3 = document.getElementById('per3')
+    var inpu4 = document.getElementById('per4')
+    var inpu5 = document.getElementById('per5')
+    var restrue5 = document.getElementById('restrue5')
+
 
     //primera pergunta
 
@@ -169,13 +179,13 @@ function finalizar() {
         in3333.disabled = 'true'
         in4444.disabled = 'true'
         in5555.disabled = 'true'
-        restrue3.style.backgroundColor = '#80808034'
+        restrue4.style.backgroundColor = '#80808034'
     } else if (in2222.checked) {
         in1111.disabled = 'true'
         in3333.disabled = 'true'
         in4444.disabled = 'true'
         in5555.disabled = 'true'
-        restrue3.style.backgroundColor = '#80808034'
+        restrue4.style.backgroundColor = '#80808034'
     } else if (in3333.checked) {
         in1111.disabled = 'true'
         in2222.disabled = 'true'
@@ -186,12 +196,52 @@ function finalizar() {
         in3333.disabled = 'true'
         in1111.disabled = 'true'
         in5555.disabled = 'true'
-        restrue3.style.backgroundColor = '#80808034'
+        restrue4.style.backgroundColor = '#80808034'
     } else if (in555.checked) {
         in2222.disabled = 'true'
         in3333.disabled = 'true'
         in4444.disabled = 'true'
         in1111.disabled = 'true'
-        restrue3.style.backgroundColor = '#80808034'
+        restrue4.style.backgroundColor = '#80808034'
     }
+
+    //quinta e ultima pergunta
+
+    inpu1.style.accentColor = 'red'
+    inpu2.style.accentColor = '#00ff00' 
+    inpu3.style.accentColor = 'red' 
+    inpu4.style.accentColor = 'red' 
+    inpu5.style.accentColor = 'red'  
+
+    if (inpu1.checked) {
+        inpu2.disabled = 'true'
+        inpu3.disabled = 'true'
+        inpu4.disabled = 'true'
+        inpu5.disabled = 'true'
+        restrue5.style.backgroundColor = '#80808034'
+    } else if (inpu2.checked) {
+        inpu1.disabled = 'true'
+        inpu3.disabled = 'true'
+        inpu4.disabled = 'true'
+        inpu5.disabled = 'true'
+    } else if (inpu3.checked) {
+        inpu1.disabled = 'true'
+        inpu2.disabled = 'true'
+        inpu4.disabled = 'true'
+        inpu5.disabled = 'true'
+        restrue5.style.backgroundColor = '#80808034'
+    } else if (inpu4.checked) {
+        inpu2.disabled = 'true'
+        inpu3.disabled = 'true'
+        inpu1.disabled = 'true'
+        inpu5.disabled = 'true'
+        restrue5.style.backgroundColor = '#80808034'
+    } else if (inpu5.checked) {
+        inpu2.disabled = 'true'
+        inpu3.disabled = 'true'
+        inpu4.disabled = 'true'
+        inpu1.disabled = 'true'
+        restrue25.style.backgroundColor = '#80808034'
+    }
+
 }
