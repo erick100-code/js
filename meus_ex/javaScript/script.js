@@ -80,204 +80,204 @@ function finalizar() {
     }
 
     if (respondeu1 == 1 && respondeu2 == 1 && respondeu3 == 1 && respondeu4 == 1 && respondeu5 == 1) {
-        document.body.style.display = 'none'  
+        //começa
+
+        //primera pergunta
+
+        in1.style.accentColor = '#00ff00'
+        in2.style.accentColor = 'red' 
+        in3.style.accentColor = 'red' 
+        in4.style.accentColor = 'red' 
+        in5.style.accentColor = 'red'  
+
+        if (in1.checked) {
+            in2.disabled = 'true'
+            in3.disabled = 'true'
+            in4.disabled = 'true'
+            in5.disabled = 'true'
+        } else if (in2.checked) {  
+            in1.disabled = 'true'
+            in3.disabled = 'true'
+            in4.disabled = 'true'
+            in5.disabled = 'true'
+            restrue1.style.backgroundColor = '#80808034'
+        } else if (in3.checked) {
+            in1.disabled = 'true'
+            in2.disabled = 'true'
+            in4.disabled = 'true'
+            in5.disabled = 'true'
+            restrue1.style.backgroundColor = '#80808034'
+        } else if (in4.checked) {
+            in1.disabled = 'true'
+            in2.disabled = 'true'
+            in3.disabled = 'true'
+            in5.disabled = 'true'
+            restrue1.style.backgroundColor = '#80808034'
+        } else if (in5.checked) {
+            in1.disabled = 'true'
+            in2.disabled = 'true'
+            in3.disabled = 'true'
+            in4.disabled = 'true'
+            restrue1.style.backgroundColor = '#80808034'
+        }
+        
+        //segunda pergunta
+
+        in11.style.accentColor = 'red'
+        in22.style.accentColor = '#00ff00' 
+        in33.style.accentColor = 'red' 
+        in44.style.accentColor = 'red' 
+        in55.style.accentColor = 'red'  
+
+        if (in11.checked) {
+            in22.disabled = 'true'
+            in33.disabled = 'true'
+            in44.disabled = 'true'
+            in55.disabled = 'true'
+            restrue2.style.backgroundColor = '#80808034'
+        } else if (in22.checked) {
+            in11.disabled = 'true'
+            in33.disabled = 'true'
+            in44.disabled = 'true'
+            in55.disabled = 'true'
+        } else if (in33.checked) {
+            in11.disabled = 'true'
+            in22.disabled = 'true'
+            in44.disabled = 'true'
+            in55.disabled = 'true'
+            restrue2.style.backgroundColor = '#80808034'
+        } else if (in44.checked) {
+            in22.disabled = 'true'
+            in33.disabled = 'true'
+            in11.disabled = 'true'
+            in55.disabled = 'true'
+            restrue2.style.backgroundColor = '#80808034'
+        } else if (in55.checked) {
+            in22.disabled = 'true'
+            in33.disabled = 'true'
+            in44.disabled = 'true'
+            in11.disabled = 'true'
+            restrue2.style.backgroundColor = '#80808034'
+        }
+
+        //tercera pergunta
+
+        in111.style.accentColor = 'red'
+        in222.style.accentColor = 'red' 
+        in333.style.accentColor = '#00ff00' 
+        in444.style.accentColor = 'red' 
+        in555.style.accentColor = 'red'  
+
+        if (in111.checked) {
+            in222.disabled = 'true'
+            in333.disabled = 'true'
+            in444.disabled = 'true'
+            in555.disabled = 'true'
+            restrue3.style.backgroundColor = '#80808034'
+        } else if (in222.checked) {
+            in111.disabled = 'true'
+            in333.disabled = 'true'
+            in444.disabled = 'true'
+            in555.disabled = 'true'
+            restrue3.style.backgroundColor = '#80808034'
+        } else if (in333.checked) {
+            in111.disabled = 'true'
+            in222.disabled = 'true'
+            in444.disabled = 'true'
+            in555.disabled = 'true'
+        } else if (in444.checked) {
+            in222.disabled = 'true'
+            in333.disabled = 'true'
+            in111.disabled = 'true'
+            in555.disabled = 'true'
+            restrue3.style.backgroundColor = '#80808034'
+        } else if (in555.checked) {
+            in222.disabled = 'true'
+            in333.disabled = 'true'
+            in444.disabled = 'true'
+            in111.disabled = 'true'
+            restrue3.style.backgroundColor = '#80808034'
+        }
+
+        //quarta pergunta
+
+        in1111.style.accentColor = 'red'
+        in2222.style.accentColor = 'red' 
+        in3333.style.accentColor = '#00ff00' 
+        in4444.style.accentColor = 'red' 
+        in5555.style.accentColor = 'red'
+
+        if (in1111.checked) {
+            in2222.disabled = 'true'
+            in3333.disabled = 'true'
+            in4444.disabled = 'true'
+            in5555.disabled = 'true'
+            restrue4.style.backgroundColor = '#80808034'
+        } else if (in2222.checked) {
+            in1111.disabled = 'true'
+            in3333.disabled = 'true'
+            in4444.disabled = 'true'
+            in5555.disabled = 'true'
+            restrue4.style.backgroundColor = '#80808034'
+        } else if (in3333.checked) {
+            in1111.disabled = 'true'
+            in2222.disabled = 'true'
+            in4444.disabled = 'true'
+            in5555.disabled = 'true'
+        } else if (in4444.checked) {
+            in2222.disabled = 'true'
+            in3333.disabled = 'true'
+            in1111.disabled = 'true'
+            in5555.disabled = 'true'
+            restrue4.style.backgroundColor = '#80808034'
+        } else if (in555.checked) {
+            in2222.disabled = 'true'
+            in3333.disabled = 'true'
+            in4444.disabled = 'true'
+            in1111.disabled = 'true'
+            restrue4.style.backgroundColor = '#80808034'
+        }
+
+        //quinta e ultima pergunta
+
+        inpu1.style.accentColor = 'red'
+        inpu2.style.accentColor = '#00ff00' 
+        inpu3.style.accentColor = 'red' 
+        inpu4.style.accentColor = 'red' 
+        inpu5.style.accentColor = 'red'  
+
+        if (inpu1.checked) {
+            inpu2.disabled = 'true'
+            inpu3.disabled = 'true'
+            inpu4.disabled = 'true'
+            inpu5.disabled = 'true'
+            restrue5.style.backgroundColor = '#80808034'
+        } else if (inpu2.checked) {
+            inpu1.disabled = 'true'
+            inpu3.disabled = 'true'
+            inpu4.disabled = 'true'
+            inpu5.disabled = 'true'
+        } else if (inpu3.checked) {
+            inpu1.disabled = 'true'
+            inpu2.disabled = 'true'
+            inpu4.disabled = 'true'
+            inpu5.disabled = 'true'
+            restrue5.style.backgroundColor = '#80808034'
+        } else if (inpu4.checked) {
+            inpu2.disabled = 'true'
+            inpu3.disabled = 'true'
+            inpu1.disabled = 'true'
+            inpu5.disabled = 'true'
+            restrue5.style.backgroundColor = '#80808034'
+        } else if (inpu5.checked) {
+            inpu2.disabled = 'true'
+            inpu3.disabled = 'true'
+            inpu4.disabled = 'true'
+            inpu1.disabled = 'true'
+            restrue5.style.backgroundColor = '#80808034'
+        }
+        //acaba
     } else if (respondeu1 == 0 || respondeu2 == 0 || respondeu3 == 0 || respondeu4 == 0 || respondeu5 == 0) {
         window.alert('prencha todas as alternativas')
     }
-
-    //primera pergunta
-
-    in1.style.accentColor = '#00ff00'
-    in2.style.accentColor = 'red' 
-    in3.style.accentColor = 'red' 
-    in4.style.accentColor = 'red' 
-    in5.style.accentColor = 'red'  
-
-    if (in1.checked) {
-        in2.disabled = 'true'
-        in3.disabled = 'true'
-        in4.disabled = 'true'
-        in5.disabled = 'true'
-    } else if (in2.checked) {  
-        in1.disabled = 'true'
-        in3.disabled = 'true'
-        in4.disabled = 'true'
-        in5.disabled = 'true'
-        restrue1.style.backgroundColor = '#80808034'
-    } else if (in3.checked) {
-        in1.disabled = 'true'
-        in2.disabled = 'true'
-        in4.disabled = 'true'
-        in5.disabled = 'true'
-        restrue1.style.backgroundColor = '#80808034'
-    } else if (in4.checked) {
-        in1.disabled = 'true'
-        in2.disabled = 'true'
-        in3.disabled = 'true'
-        in5.disabled = 'true'
-        restrue1.style.backgroundColor = '#80808034'
-    } else if (in5.checked) {
-        in1.disabled = 'true'
-        in2.disabled = 'true'
-        in3.disabled = 'true'
-        in4.disabled = 'true'
-        restrue1.style.backgroundColor = '#80808034'
-    }
-    
-    //segunda pergunta
-
-    in11.style.accentColor = 'red'
-    in22.style.accentColor = '#00ff00' 
-    in33.style.accentColor = 'red' 
-    in44.style.accentColor = 'red' 
-    in55.style.accentColor = 'red'  
-
-    if (in11.checked) {
-        in22.disabled = 'true'
-        in33.disabled = 'true'
-        in44.disabled = 'true'
-        in55.disabled = 'true'
-        restrue2.style.backgroundColor = '#80808034'
-    } else if (in22.checked) {
-        in11.disabled = 'true'
-        in33.disabled = 'true'
-        in44.disabled = 'true'
-        in55.disabled = 'true'
-    } else if (in33.checked) {
-        in11.disabled = 'true'
-        in22.disabled = 'true'
-        in44.disabled = 'true'
-        in55.disabled = 'true'
-        restrue2.style.backgroundColor = '#80808034'
-    } else if (in44.checked) {
-        in22.disabled = 'true'
-        in33.disabled = 'true'
-        in11.disabled = 'true'
-        in55.disabled = 'true'
-        restrue2.style.backgroundColor = '#80808034'
-    } else if (in55.checked) {
-        in22.disabled = 'true'
-        in33.disabled = 'true'
-        in44.disabled = 'true'
-        in11.disabled = 'true'
-        restrue2.style.backgroundColor = '#80808034'
-    }
-
-    //tercera pergunta
-
-    in111.style.accentColor = 'red'
-    in222.style.accentColor = 'red' 
-    in333.style.accentColor = '#00ff00' 
-    in444.style.accentColor = 'red' 
-    in555.style.accentColor = 'red'  
-
-    if (in111.checked) {
-        in222.disabled = 'true'
-        in333.disabled = 'true'
-        in444.disabled = 'true'
-        in555.disabled = 'true'
-        restrue3.style.backgroundColor = '#80808034'
-    } else if (in222.checked) {
-        in111.disabled = 'true'
-        in333.disabled = 'true'
-        in444.disabled = 'true'
-        in555.disabled = 'true'
-        restrue3.style.backgroundColor = '#80808034'
-    } else if (in333.checked) {
-        in111.disabled = 'true'
-        in222.disabled = 'true'
-        in444.disabled = 'true'
-        in555.disabled = 'true'
-    } else if (in444.checked) {
-        in222.disabled = 'true'
-        in333.disabled = 'true'
-        in111.disabled = 'true'
-        in555.disabled = 'true'
-        restrue3.style.backgroundColor = '#80808034'
-    } else if (in555.checked) {
-        in222.disabled = 'true'
-        in333.disabled = 'true'
-        in444.disabled = 'true'
-        in111.disabled = 'true'
-        restrue3.style.backgroundColor = '#80808034'
-    }
-
-    //quarta pergunta
-
-    in1111.style.accentColor = 'red'
-    in2222.style.accentColor = 'red' 
-    in3333.style.accentColor = '#00ff00' 
-    in4444.style.accentColor = 'red' 
-    in5555.style.accentColor = 'red'
-
-    if (in1111.checked) {
-        in2222.disabled = 'true'
-        in3333.disabled = 'true'
-        in4444.disabled = 'true'
-        in5555.disabled = 'true'
-        restrue4.style.backgroundColor = '#80808034'
-    } else if (in2222.checked) {
-        in1111.disabled = 'true'
-        in3333.disabled = 'true'
-        in4444.disabled = 'true'
-        in5555.disabled = 'true'
-        restrue4.style.backgroundColor = '#80808034'
-    } else if (in3333.checked) {
-        in1111.disabled = 'true'
-        in2222.disabled = 'true'
-        in4444.disabled = 'true'
-        in5555.disabled = 'true'
-    } else if (in4444.checked) {
-        in2222.disabled = 'true'
-        in3333.disabled = 'true'
-        in1111.disabled = 'true'
-        in5555.disabled = 'true'
-        restrue4.style.backgroundColor = '#80808034'
-    } else if (in555.checked) {
-        in2222.disabled = 'true'
-        in3333.disabled = 'true'
-        in4444.disabled = 'true'
-        in1111.disabled = 'true'
-        restrue4.style.backgroundColor = '#80808034'
-    }
-
-    //quinta e ultima pergunta
-
-    inpu1.style.accentColor = 'red'
-    inpu2.style.accentColor = '#00ff00' 
-    inpu3.style.accentColor = 'red' 
-    inpu4.style.accentColor = 'red' 
-    inpu5.style.accentColor = 'red'  
-
-    if (inpu1.checked) {
-        inpu2.disabled = 'true'
-        inpu3.disabled = 'true'
-        inpu4.disabled = 'true'
-        inpu5.disabled = 'true'
-        restrue5.style.backgroundColor = '#80808034'
-    } else if (inpu2.checked) {
-        inpu1.disabled = 'true'
-        inpu3.disabled = 'true'
-        inpu4.disabled = 'true'
-        inpu5.disabled = 'true'
-    } else if (inpu3.checked) {
-        inpu1.disabled = 'true'
-        inpu2.disabled = 'true'
-        inpu4.disabled = 'true'
-        inpu5.disabled = 'true'
-        restrue5.style.backgroundColor = '#80808034'
-    } else if (inpu4.checked) {
-        inpu2.disabled = 'true'
-        inpu3.disabled = 'true'
-        inpu1.disabled = 'true'
-        inpu5.disabled = 'true'
-        restrue5.style.backgroundColor = '#80808034'
-    } else if (inpu5.checked) {
-        inpu2.disabled = 'true'
-        inpu3.disabled = 'true'
-        inpu4.disabled = 'true'
-        inpu1.disabled = 'true'
-        restrue5.style.backgroundColor = '#80808034'
-    }
-
 }
