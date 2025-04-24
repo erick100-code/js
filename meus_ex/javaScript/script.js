@@ -81,7 +81,7 @@ function finalizar() {
 
     if (respondeu1 == 1 && respondeu2 == 1 && respondeu3 == 1 && respondeu4 == 1 && respondeu5 == 1) {
         //começa
-
+        window.scrollTo(0, 0)
         //primera pergunta
 
         in1.style.accentColor = '#00ff00'
@@ -230,7 +230,7 @@ function finalizar() {
             in1111.disabled = 'true'
             in5555.disabled = 'true'
             restrue4.style.backgroundColor = '#80808034'
-        } else if (in555.checked) {
+        } else if (in5555.checked) {
             in2222.disabled = 'true'
             in3333.disabled = 'true'
             in4444.disabled = 'true'
