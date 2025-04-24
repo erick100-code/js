@@ -241,7 +241,7 @@ function finalizar() {
         inpu3.disabled = 'true'
         inpu4.disabled = 'true'
         inpu1.disabled = 'true'
-        restrue25.style.backgroundColor = '#80808034'
+        restrue5.style.backgroundColor = '#80808034'
     }
 
 }
