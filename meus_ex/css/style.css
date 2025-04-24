@@ -89,7 +89,7 @@ div.alternativas > div.fl {
     align-items: center;
     justify-content: flex-start; 
 
-    color: rgba(255, 255, 255, 0.733);
+    color: rgba(255, 255, 255, 0.733); 
 }
 
 div.fl > p {
