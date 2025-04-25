@@ -1,5 +1,6 @@
 # js
- repositorio de treino javascript
+
+repositorio de treino javascript
 
 
-<a href="">perguntas</a>
+<a href="https://erick100-code.github.io/js/meus_ex/ex001/html/index.html">perguntas</a>
