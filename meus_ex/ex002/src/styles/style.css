@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    font-family: "Cascadia Mono", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #6366f1;
+}
+
+div#conteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0px;
+    width: 500px;
+}
+
+div.accordion {
+    padding: 12px;
+
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.178);
+
+    cursor: pointer;
+}
+
+button.accordion-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    border: none;
+    background-color: transparent;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button.accordion-header > span {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden; /*quando ultrapassa o max-width ele some*/
+
+    text-overflow: ellipsis; /*coloca 3 pontos no final*/ 
+}
+
+div.accordion-body {
+
+    color: #444;
+    opacity: 0;
+    height: 0px; 
+
+    font-size: 14px;
+}
