@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    font-family: "Cascadia Mono", sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #6366F1;
+}
+
+div.conteiner {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0px;
+
+    background-color: transparent;
+}
+
+div.accordion {
+    padding: 12px;
+
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.144);
+
+    cursor: pointer;
+}
+
+button.accordion-head {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    border: none;
+    background-color: transparent;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button.accordion-head > span {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+div.accordion-body {
+    height: 0px;
+    overflow: hidden;
+
+    opacity: 0;
+    color: #444;
+
+    font-size: 14px;
+
+    transition: opacity .5s;
+}
+
+div.accordion-body.active {
+    padding: 25px 0px;
+    height: 100%;
+    opacity: 1;
+}
+
+div.accordion:has(.active) .arrow {/*se a div com a classe accordion-body (has)tiver a classe active então a div com a classe arrow...codigo abaixo*/
+    transform: rotate(180deg);   
+}
+
+.arrow {
+    transition: transform .3s linear;
+}
