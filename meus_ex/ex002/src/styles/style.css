@@ -62,14 +62,27 @@ button.accordion-header > span {
 div.accordion-body {
     opacity: 0;
     height: 0px;
+    overflow: hidden;
 
     color: #444;
 
     font-size: 14px;
+
+    transition: opacity .3s;
 }
 
 div.accordion-body.active {
     height: 100%;
     opacity: 1;
     padding: 25px 0px;
+}
+
+/*accordion animação*/
+
+div.accordion:has(.active) .arrow {
+    transform: rotate(180deg);
+}
+
+i.arrow {
+    transition: transform .2s linear;
 }
