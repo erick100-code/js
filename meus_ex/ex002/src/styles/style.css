@@ -53,17 +53,23 @@ button.accordion-header {
 
 button.accordion-header > span {
     max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden; /*quando ultrapassa o max-width ele some*/
+    white-space: nowrap; /*para não quebrar*/
+    overflow: hidden; /*para os espaço não sair para fora*/
 
     text-overflow: ellipsis; /*coloca 3 pontos no final*/ 
 }
 
 div.accordion-body {
+    opacity: 0;
+    height: 0px;
 
     color: #444;
-    opacity: 0;
-    height: 0px; 
 
     font-size: 14px;
+}
+
+div.accordion-body.active {
+    height: 100%;
+    opacity: 1;
+    padding: 25px 0px;
 }
