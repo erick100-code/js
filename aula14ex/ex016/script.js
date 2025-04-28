@@ -5,9 +5,10 @@ const botão = document.getElementById('bot')
 const resposta = document.getElementById('res')
 
 botão.addEventListener('click', () => {
+    resposta.innerHTML = null
     if (cxinicio.value.length == 0 || cxfim.value.length == 0 || cxpasso.value.length == 0) {
         window.alert('impossivel contar')
-    } else if (cxpasso.value == 0) {
+    } else if (cxpasso.value == 0) { 
         window.alert('passo invalido considerando passo 1')
         
         var inicio = Number(cxinicio.value)
@@ -20,16 +21,14 @@ botão.addEventListener('click', () => {
 
         if (inicio < fim) {
             for (var c = inicio; c <= fim; c = c + passo) {
-                resposta.innerHTML += ` ${c} `
+                resposta.innerHTML += ` ${c} 👉 `
             }
+            resposta.innerHTML += `🏁`
         } else if (inicio > fim) {
             for(var c = inicio; c > fim; c = c - passo) {
-                resposta.innerHTML += ` ${c} `
+                resposta.innerHTML += ` ${c} 👉 `
             }
-        }
-
-        for(var c = inicio; c <= fim; c = c + passo) {
-            resposta.innerHTML += `${c} `
+            resposta.innerHTML += `🏁`
         }
                 
     } else {
@@ -41,15 +40,14 @@ botão.addEventListener('click', () => {
 
         if (inicio > fim) {
             for (var c = inicio; c >= fim; c = c - passo) {
-                resposta.innerHTML += ` ${c} `
+                resposta.innerHTML += ` ${c} 👉 `
             }
+            resposta.innerHTML += `🏁`
         } else if (inicio < fim) {
             for(var c = inicio; c <= fim; c = c + passo) {
-                resposta.innerHTML += ` ${c} `
+                resposta.innerHTML += ` ${c} 👉 `
             }
-        }
-
-        
-                
+            resposta.innerHTML += `🏁`
+        }      
     }
 })
