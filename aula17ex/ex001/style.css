@@ -22,6 +22,15 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.301);
 }
 
+select {
+    margin: 10px 0px;
+    width: 200px;
+}
+
+div#finalizar {
+    margin-bottom: 20px;
+}
+
 footer {
     text-align: center;
     font-style: italic;
