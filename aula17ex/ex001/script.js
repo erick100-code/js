@@ -45,13 +45,15 @@ add.addEventListener('click', () => {
         }
     
     }
+    caixatxt.value = ''//apaga o valor do input
+    caixatxt.focus()//coloca foco no input
 })
 
 finalizar.addEventListener('click', () => {
     if (valores.length == 0) {
         window.alert('adicione valores antes de finalizar')
     } else {
-        var div = s/5
+        var div = s / 5
         res.innerHTML = ''
         res.innerHTML = `<br>ao todo, temos ${valores.length} cadastrados`
         res.innerHTML += `<br>o maior valor informado foi ${maior}`
