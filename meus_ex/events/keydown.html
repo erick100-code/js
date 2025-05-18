@@ -48,26 +48,24 @@
     </main>
 
     <script>
-        window.alert("digite os valores dentro do input e saia do foco para salvar cada um dele individualmente")
-        
-        const caixa1 = document.getElementById("cx1")
-        const caixa2 = document.getElementById('cx2')
-        const caixatxt = document.getElementById('txt')
-        var vet = []
-        
-        caixatxt.addEventListener('change', () => {// EXECUTA A FUNÇÃO QUANDO O CAMPO DO INPUT (É ALTERADO E SAI DE FOCO)
-            var atual = caixatxt.value
-            vet.push(atual)
-            window.alert(`vetor [${vet}]`)
-            
-        })
+        const caixatxt = document.getElementById("txt")
+        var vet = [21, 50, 111]
 
-        caixa2.addEventListener("click", () => {
-            caixa1.style.display = 'none'
-            var n1 = Number(vet[3])
-            vet[3] = n1
-            window.alert(`[${vet[3]}]{${typeof vet[3]}}`)
-        })
+        caixatxt.addEventListener("keydown", (event) => {// (event) PERMITI USAR EX: EVENT.KEY
+            vet[0] += 7
+            vet[1] += 13
+            vet[2] += 20
+            
+            for (var c = 0; c < vet.length; c++) {
+                if (vet[c] > 250) {
+                    vet[c] = 0
+                }
+            }
+
+            var corpo = document.body
+
+            corpo.style.backgroundColor = `rgb(${vet[0]} ,${vet[1]}, ${vet[2]})`
+        })// QUANDO QUALQUER TECLA FOR PRESSIONADA
     </script>
 </body>
 </html>
