@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+    <style>
+        html, body {height: 100vh; margin: 0px;}
+
+        main {
+            min-height: 1000vh;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 400px 400px;
+            justify-content: center;
+            align-content: center;
+            gap: 30px 30px;
+            
+            /*
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 0px 10px;
+            */    
+        }
+
+        div.caixa1 {height: 300px; width: 400px; background-color: rgb(0, 255, 0);}
+
+        div.caixa2 {height: 300px; width: 400px; background-color: rgb(255, 0, 0);}   
+    </style>
+</head>
+<body>
+    <main id="princi">
+        
+        <div class="caixa1">
+            <h1>titulo de nivel 1</h1>
+        </div>
+        <div class="caixa2">
+            <h2>titulo de nivel 2</h2>
+        </div>
+    </main>
+
+    <script>
+        var cores = [0, 0, 0]
+        const mai = document.getElementById('princi')
+        var cax1 = mai.querySelectorAll("div.caixa1")
+        var cax2 = mai.querySelectorAll("div.caixa2")
+
+        window.addEventListener("scroll", () => {
+            cax1.forEach(cx1 => {
+                var cor = getComputedStyle(cx1).backgroundColor
+
+                if (cor === 'rgb(0, 255, 0)') {
+                    setTimeout(() => {
+                        cx1.style.backgroundColor = 'red'
+                    }, 100);
+                } else {
+                    setTimeout(() => {
+                        cx1.style.backgroundColor = 'rgb(0, 255, 0)'
+                    }, 100)
+                 
+                }
+            })
+
+            cax2.forEach(cx2 => {
+                var cod = getComputedStyle(cx2).backgroundColor
+                
+                if (cod === 'rgb(255, 0, 0)') {
+                    setTimeout(() => {
+                        cx2.style.backgroundColor = 'rgb(0, 250, 0)'
+                    }, 100);
+                } else {
+                    setTimeout(() => {
+                        cx2.style.backgroundColor = 'red'
+                    }, 100);
+                }
+            })    
+
+            
+            
+            var corpo = document.body
+            
+            cores[0] += 15
+            cores[1] += 33
+            cores[2] += 3
+            
+            for (var c = 0; c < cores.length; c++) {
+                if (cores[c] > 250) {
+                    cores[c] = 0
+                }
+            }
+            
+            corpo.style.backgroundColor = `rgb(${cores[0]}, ${cores[1]}, ${cores[2]})`
+        })// AQUI ADICIONAMOS O EVENTO DIRETAMENTE NO WINDOW
+    </script>
+</body>
+</html>

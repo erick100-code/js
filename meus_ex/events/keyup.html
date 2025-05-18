@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+    <style>
+        main {
+            height: 100vh;
+            width: 100vw;
+            /*display: grid;
+            grid-template-columns: 400px 400px;
+            justify-content: center;
+            align-content: center;
+            gap: 0px 30px;
+            */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 0px 10px;
+        }
+
+        div#cx1 {
+            height: 300px;
+            width: 400px;
+            
+            background-color: #00ff00;
+        }
+
+        div#cx2 {
+            height: 300px;
+            width: 400px;
+
+            background-color: red;
+        }   
+    </style>
+</head>
+<body>
+    <main>
+        <div id="cx1">
+            <h1>titulo de nivel 1</h1>
+            <input type="text" name="txt" id="txt">
+        </div>
+        <div id="cx2">
+            <h2>titulo de nivel 2</h2>
+        </div>
+    </main>
+
+    <script>
+        var caixatexto = document.getElementById('txt')
+
+        caixatexto.addEventListener("keyup", (atual) => {
+            if (atual.key === 'Enter') {
+                window.alert(`a tecla ${atual.key} foi solta`)
+                document.body.style.backgroundColor = '#00ff00'
+            }
+        })
+
+    </script>
+</body>
+</html>
