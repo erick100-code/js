@@ -38,32 +38,26 @@
 </head>
 <body>
     <main>
-        <div id="cx1" class="caixas">
+        <div id="cx1">
             <h1>titulo de nivel 1</h1>
-            <input type="text" name="txt" id="txt"> 
+            <input type="text" name="txt" id="txt">
         </div>
-        <div id="cx2" class="caixas">
+        <div id="cx2">
             <h2>titulo de nivel 2</h2>
         </div>
     </main>
 
     <script>
-
-        const caixatxt = document.getElementById('txt')        
-        var vet = []
-
-
-        caixatxt.addEventListener('input', () => {// toda que o campo muda ele chama a função
-            var novoV = caixatxt.value
-            vet.push(novoV)
-            window.alert(vet)
-
-            var caixas = document.querySelectorAll('.caixas')
-            caixas.forEach(nome => {
-                nome.style.backgroundColor = 'red'
-            })
-        })
+        window.alert("digite os valores dentro do input e saia do foco para salvar cada um dele individualmente")
         
+        const caixatxt = document.getElementById('txt')
+        var vet = []
+        
+        caixatxt.addEventListener('change', () => {// EXECUTA A FUNÇÃO QUANDO O CAMPO DO INPUT (É ALTERADO E SAI DE FOCO)
+            var atual = caixatxt.value
+            vet.push(atual)
+            window.alert(`vetor [${vet}]`)
+        })
     </script>
 </body>
 </html>
