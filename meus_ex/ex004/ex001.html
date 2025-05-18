@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+    <style>
+        main {
+            height: 100vh;
+            width: 100vw;
+            /*display: grid;
+            grid-template-columns: 400px 400px;
+            justify-content: center;
+            align-content: center;
+            gap: 0px 30px;
+            */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 0px 10px;
+        }
+
+        div#cx1 {
+            height: 300px;
+            width: 400px;
+            
+            background-color: rgb(0, 255, 0);
+        }
+
+        div#cx2 {
+            height: 300px;
+            width: 400px;
+
+            background-color: red;
+        }  
+        
+        h2 {
+            font-size: 31px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="cx1">
+            <h1 id="tt1">titulo de nivel 1</h1>
+        </div>
+        <div id="cx2">
+            <h2>titulo de nivel 2</h2>
+        </div>
+    </main>
+
+    <script>
+        const caixa1 = document.getElementById('cx1')
+        caixa1.style.cursor = 'pointer'
+
+
+        caixa1.addEventListener("click", () => {
+            const tt1 = document.getElementById('tt1')
+            const estilo = window.getComputedStyle(tt1) //PEGA TODOS OS VALORES DO ESTILO
+            var tamanhoAtual = parseInt(estilo.fontSize)
+            var novoTamanho = tamanhoAtual + 50
+            tt1.style.fontSize = novoTamanho + 'px'
+        })
+    </script>
+</body>
+</html>
