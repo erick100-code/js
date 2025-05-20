@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="c1" style="padding: 30px;">
+        primera div
+    </div>
+    <br><br><br><br><br>
+    <input type="number" name="c2" id="c2">
+
+    <script>// ESSE CODIGO FAZ COM QUE AO TIRAR O FOCO DO INPUT O EVENTO CLICK É ASSIONADO QUE CHAMMA A FUNÇÃO ARROW CLICAR 
+        const cx1 = document.getElementById('c1')
+        const inp = document.getElementById('c2')
+        
+        cx1.style.cursor = 'pointer'
+
+        cx1.addEventListener("click", () => {// 3- EXECUTA A ARROW FUNCTION QUANDO A CAIXA É CLICADA 
+            document.body.style.backgroundColor = 'red'
+        })
+
+        inp.addEventListener("blur", () => {// 1- QUANDO O INPUT SAI DE FOCO    
+            cx1.click()// -2 DIV É CLICADA
+        })  
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+        main {
+            height: 100vh;
+            width: 100vw;
+
+            background-color: white;
+        }
+
+        form {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>se apertar (c) envia formulario</h1>
+        <form action="cadastro.php" id="for">
+            <div id="c1" class="caixas">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email" class="inpu">
+            </div>
+            
+            <div id="c2" class="caixas">
+                <label for="number">numero</label>
+                <input type="number" name="" id="number" class="inpu">
+            </div>
+
+            <input type="submit" value="enviar" id="btn">
+        </form>
+    </main>
+    <script>
+        const formulario = document.getElementById('for')
+        const caixas = document.querySelectorAll('div.caixas')
+        const bot = document.getElementById('btn')
+
+        bot.addEventListener("click", (config) => {
+            config.preventDefault()// BLOQUEIA O CORPORTAMENTE PADÃO DE UMA AÇÃO OU EVENTO
+        })
+
+        caixas.forEach(caixa => {// SELECIONA AS DIVS   
+            const inpu = caixa.querySelector('.inpu')
+            
+
+            inpu.addEventListener("keydown", (event) => {
+                if (event.key === 'a') {
+                    formulario.submit()
+                }
+                
+                if (event.key === 'Enter') {
+                    event.preventDefault()
+                }
+            })  
+        })
+    </script>
+</body>
+</html>
