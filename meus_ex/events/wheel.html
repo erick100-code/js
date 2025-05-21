@@ -6,6 +6,8 @@
     <title>Document</title>
     <style>
         body {
+            background-color: rgb(255, 255, 255);
+
             height: 1000vh;
             width: 100vw;
         }
@@ -17,6 +19,8 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+        
+            background-color: transparent;
         }
     </style>
 </head>
@@ -33,12 +37,11 @@
         // { passive: false }.)
     
         const tit = document.getElementById('titulo')
-        
-        window.addEventListener("DOMContentLoaded", () => {
-            tit.style.display = 'none'
-        })// ESSE EVENTO ESPERA O HTML CARREGAR TODO POR SEGURANÇA PARA NÃO TENTAR SELECIONAR UM DOM QUE NÃO EXISTE(porque não foi carregado)
+       
 
-        
+        window.addEventListener("wheel", (event) => {// USAR WHEEL EM VEZ DE SCROLL
+            event.preventDefault()
+        }, { passive: false })// WHEL EXECUTA O BLOCO ANTES DE ROLAR.  O SCROLL EXECUTA O BLOCO DEPOIS DE SCROLLAR
     </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1 id="tt">titulo de nivel h1</h1>
+    </main>
+
+    <script>
+        // CONTEXTMENU ACONTECE QUNADO O USUARIO TENTA ABRIR O MENU COM BOTÃO DIREITO
+
+        const title = document.getElementById('tt')
+        
+        window.addEventListener("contextmenu", (event) => {
+            if (event.target != title) {// TARGET == ONDE FOI DISPARADO O EVENT
+                event.preventDefault()
+                document.body.style.backgroundColor = 'white'
+            }else {
+                document.body.style.backgroundColor = 'red'
+            }
+        })
+
+    </script>
+</body>
+</html>
