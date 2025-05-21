@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quadro de imagens</title>
+    <style>
+        img {
+            width: 25%;
+        }
+
+        div#local {
+            margin-top: 30px;
+            width: 300px;
+            height: 300px;
+
+            border: 3px dotted gray;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/pexels-jplenio-1146708.jpg" alt="campo verde ao afastar do sol" id="image">
+    <div id="local"></div>
+
+    <script>
+        const img = document.getElementById('image')
+        const local = document.getElementById('local')
+
+        img.addEventListener("dragstart", (event) => {// DISPARA EVENTO QUANDO COMEÇAR A ARRASTAR
+            event.dataTransfer.setData('text/plain', event.target.id)
+        })
+
+        local.addEventListener("dragover", (event) => {// O EVENTO DISPARA QUANDO PASSA ALGO POR CIMA
+            event.preventDefault()// PERMITI QUE SOLTE ALGO (IMG...)
+        })
+
+        local.addEventListener("drop", (event) => {
+            img.style.height = '100%'
+            img.style.width = '100%'
+            event.preventDefault()// IMPEDE COMPORTAMENTOS INESPERADOS COMO ABRIR IMAGENS...
+            const data = event.dataTransfer.getData('text/plain')
+            const final = document.getElementById(data)
+            local.appendChild(final)
+        })// O EVENTO DISPARA QUANDO SOLTA ALGO
+    </script>
+</body>
+</html>

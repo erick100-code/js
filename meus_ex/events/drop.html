@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arraste</title>
+    <style>
+        img {
+            width: 20%;
+        }
+        div#local {
+            height: 400px;
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 5px dotted black;
+        }
+    </style>
+</head>
+<body>
+ <!-- draggable true ativa a capacidade de ser arrastado -->
+    <img src="images/pexels-jplenio-1146708.jpg" alt="imagem" id="img" draggable="true">   
+
+    <div id="local">
+
+    </div>
+
+    <script>
+        const img = document.getElementById('img')
+        const local = document.getElementById('local')
+
+        // dragstart (quando o arrasto começa)
+        // dragover (quando o item arrastavel esta passando por cima do alvo)
+        // drop (quando solta o item no alvo)
+
+        img.addEventListener("dragstart", (e) => {
+            e.dataTransfer.setData('text/plain', e.target.id)
+        })// salva o id da variavel imagem nodataTransfer.setData
+
+        local.addEventListener("dragover", (e) => {
+            e.preventDefault() // permiti que o navegador solte isso no (LOCAL)
+        })// EVENTO DISPARA QUANDO UM ITEM ARRASTAVEL PASSAR POR CIMA DA VARIAVEL (LOCAL)
+
+        local.addEventListener("drop", (e) => {
+            img.style.width = '100%'
+            img.style.height = '100%'
+            e.preventDefault()// IMPEDI COMPORTAMENTOS PADRÕES, COMO ABRIR UMA IMAGEM...
+            const data = e.dataTransfer.getData('text/plain')
+            const finalid = document.getElementById(data)
+            local.appendChild(finalid)
+        })// DISPARA QUANDO VOCÊ SOLTA UM ITEM NO ALVO
+    </script>
+</body>
+</html>

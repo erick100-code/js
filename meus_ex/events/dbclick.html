@@ -21,16 +21,21 @@
     </style>
 </head>
 <body>
-    <h1>double click</h1>
+    <h1 id="t1">double click</h1>
     <div id="caixa">
-        <p>click aqui</p>
+        <p id="pg1">click aqui</p>
     </div>
 
     <script>
-        cax = document.getElementById('caixa')
-        
-        cax.addEventListEner("click", () => {
-            window.alert("div clicada")
+        const t1 = document.getElementById('t1')
+        const cx = document.getElementById('caixa')
+
+        t1.addEventListener("dblclick", () => {
+            cx.click()    
+        })// QUANDO O TITULO RECEBER 2 CLICKS A DIV CX RECEBE UM CLICK
+
+        cx.addEventListener("click", () => {// DIV CX RECEBENDO UM CLICK MUDA A COR DO FUNDO DA DIV
+            cx.style.backgroundColor = 'rgb(0, 255, 0)'
         })
     
     </script>
