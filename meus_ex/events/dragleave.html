@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quando o arrastado sai do alvo</title>
+    <style>
+        img {
+            width: 25%;
+        }
+
+        div#local {
+            width: 300px;
+            height: 300px;
+            margin-top: 20px;
+
+            border: 4px dotted black;
+        }
+    </style>
+</head>
+<body>  
+    <img src="images/pexels-jplenio-1146708.jpg" id="img" alt="campo ver ao afastar do sol" draggable="true">
+    <div id="local">
+
+    </div>
+    
+    <script>    
+        const img = document.getElementById('img')
+        const local = document.getElementById('local')
+
+        local.addEventListener("dragleave", () => {// DISPARA QUANDO O ELEMENTO SAI DA AREA DO ELEMENTO ALVO (var local = div#alvo) o elemento tem que draggable "true"
+            document.body.style.backgroundColor = 'red'
+        })
+    </script>
+</body>
+</html>
